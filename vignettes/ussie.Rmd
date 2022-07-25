@@ -1,0 +1,30 @@
+---
+title: "ussie"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{ussie}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(ussie)
+library(dplyr)
+```
+
+ussie helps you work with European football data from the engsoccerdata package
+by cleaning and manipulating the data into more useful forms.
+
+```{r}
+germany <- uss_make_matches(engsoccerdata::germany, "Germany")
+
+glimpse(germany)
+```
+
