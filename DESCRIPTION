@@ -1,11 +1,13 @@
 Package: ussie
-Title: What the Package Does (One Line, Title Case)
+Title: Working With European Football Data
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Steve", family = "Spangler",
     email = "steven.spangler@gmail.com",
     role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+Description: This is a package created during the Tidy Tools workshop at
+    rstudio::conf(2022). Functions in this package are intended to work
+    with data supplied by the engsoccerdata package (Curley 2016).
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
