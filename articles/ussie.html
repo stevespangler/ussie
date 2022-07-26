@@ -103,6 +103,25 @@
 <span><span class="co">#&gt; $ visitor       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Borussia Dortmund", "1. FC Koln", "Eintracht Braunschwe…</span></span>
 <span><span class="co">#&gt; $ goals_home    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 3, 0, 1, 1, 2, 1, 1, 1, 3, 4, 3, 4, 2, 2, 3, 1, 1, 0, 2,…</span></span>
 <span><span class="co">#&gt; $ goals_visitor <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 2, 2, 1, 1, 0, 1, 4, 1, 3, 2, 0, 0, 3, 0, 1, 0, 3, 4, 3,…</span></span></code></pre></div>
+<div class="section level2">
+<h2 id="collect-match-data-for-a-particular-country">Collect match data for a particular country<a class="anchor" aria-label="anchor" href="#collect-match-data-for-a-particular-country"></a>
+</h2>
+<p>Use the function <code><a href="../reference/uss_get_matches.html">uss_get_matches()</a></code> to get data for a country</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">germany_matches</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/uss_get_matches.html">uss_get_matches</a></span><span class="op">(</span><span class="st">"germany"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="va">germany_matches</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Rows: 16,120</span></span>
+<span><span class="co">#&gt; Columns: 8</span></span>
+<span><span class="co">#&gt; $ country       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Germany", "Germany", "Germany", "Germany", "Germany", "…</span></span>
+<span><span class="co">#&gt; $ tier          <span style="color: #949494; font-style: italic;">&lt;fct&gt;</span> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,…</span></span>
+<span><span class="co">#&gt; $ season        <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1963, 1963, 1963, 1963, 1963, 1963, 1963, 1963, 1963, 19…</span></span>
+<span><span class="co">#&gt; $ date          <span style="color: #949494; font-style: italic;">&lt;date&gt;</span> 1963-08-24, 1963-08-24, 1963-08-24, 1963-08-24, 1963-08…</span></span>
+<span><span class="co">#&gt; $ home          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Werder Bremen", "1. FC Saarbrucken", "TSV 1860 Munchen"…</span></span>
+<span><span class="co">#&gt; $ visitor       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Borussia Dortmund", "1. FC Koln", "Eintracht Braunschwe…</span></span>
+<span><span class="co">#&gt; $ goals_home    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 3, 0, 1, 1, 2, 1, 1, 1, 3, 4, 3, 4, 2, 2, 3, 1, 1, 0, 2,…</span></span>
+<span><span class="co">#&gt; $ goals_visitor <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 2, 2, 1, 1, 0, 1, 4, 1, 3, 2, 0, 0, 3, 0, 1, 0, 3, 4, 3,…</span></span></code></pre></div>
+</div>
   </main>
 </div>
 
