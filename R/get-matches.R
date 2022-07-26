@@ -71,6 +71,7 @@ get_soccer_data <- function(data_name) {
 #'
 #' `uss_countries()` returns the available choices; `"england"` is
 #' the default.
+#' You may pass items to filter().
 #'
 #' This function relies on an internal function, `uss_make_matches()`, to parse
 #' the source data.
@@ -81,11 +82,13 @@ get_soccer_data <- function(data_name) {
 #' @return dataframe
 #'
 #' @inherit uss_make_matches
+#' @inheritParams dplyr::filter
 #' @examples
 #' uss_get_matches("england")
+#' uss_get_matches("italy", season == 1960)
 #' @export
 #'
-uss_get_matches <- function(country = uss_countries()) {
+uss_get_matches <- function(country = uss_countries(), ...) {
 
   # 2.2.1 side effects (errors)
   #
@@ -109,7 +112,8 @@ uss_get_matches <- function(country = uss_countries()) {
   # (but we aren't doing that here)
   # https://design.tidyverse.org/dots-prefix.html
 
-  uss_make_matches(data, country)
+  uss_make_matches(data, country) |>
+    dplyr::filter(...)
 }
 
 
