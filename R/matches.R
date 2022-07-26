@@ -4,14 +4,14 @@
 #' standardised column-names and types, e.g. `date` is a `Date`.
 #'
 #' @param data_engsoc dataframe from engsoccer package
-#' @param country_name league country name, one of Spain, Italy, England,
+#' @param country league country name, one of Spain, Italy, England,
 #' or Holland
 #'
 #' @return dataframe, tibble
 #' @export
 #'
 #' @examples uss_make_matches(engsoccerdata::spain, "Spain")
-uss_make_matches <- function(data_engsoc, country_name) {
+uss_make_matches <- function(data_engsoc, country) {
 
   # validate
   validate_data_frame(data_engsoc)
@@ -22,7 +22,7 @@ uss_make_matches <- function(data_engsoc, country_name) {
     data_engsoc |>
     tibble::as_tibble() |>
     dplyr::transmute(
-      country = as.character(.env$country_name),
+      country = as.character(.env$country),
       tier = factor(.data$tier, levels = c("1", "2", "3", "4")),
       season = as.integer(.data$Season),
       date = as.Date(.data$Date),

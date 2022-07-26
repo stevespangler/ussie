@@ -4,12 +4,12 @@
 \alias{uss_make_matches}
 \title{Create a standardized tibble for league data}
 \usage{
-uss_make_matches(data_engsoc, country_name)
+uss_make_matches(data_engsoc, country)
 }
 \arguments{
 \item{data_engsoc}{dataframe from engsoccer package}
 
-\item{country_name}{league country name, one of Spain, Italy, England,
+\item{country}{league country name, one of Spain, Italy, England,
 or Holland}
 }
 \value{
