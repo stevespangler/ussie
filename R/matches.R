@@ -7,11 +7,17 @@
 #' @param country_name league country name, one of Spain, Italy, England,
 #' or Holland
 #'
-#' @return dataframme, tibble
+#' @return dataframe, tibble
 #' @export
 #'
 #' @examples uss_make_matches(engsoccerdata::spain, "Spain")
 uss_make_matches <- function(data_engsoc, country_name) {
+
+  # validate
+  validate_data_frame(data_engsoc)
+  validate_cols(data_engsoc, cols_engsoc())
+
+  # put into standard form
   result <-
     data_engsoc |>
     tibble::as_tibble() |>

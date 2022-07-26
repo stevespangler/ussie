@@ -6,8 +6,11 @@
 \usage{
 uss_get_matches(country = uss_countries())
 }
+\arguments{
+\item{country}{Name of country}
+}
 \value{
-dataframme, tibble
+dataframe
 }
 \description{
 Gets league-play data for each game, from {engsoccerdata}, returning

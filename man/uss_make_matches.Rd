@@ -13,7 +13,7 @@ uss_make_matches(data_engsoc, country_name)
 or Holland}
 }
 \value{
-dataframme, tibble
+dataframe, tibble
 }
 \description{
 Given a league-play data frame from {engsoccer}, returns a tibble with
