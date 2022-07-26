@@ -28,3 +28,12 @@ germany <- uss_make_matches(engsoccerdata::germany, "Germany")
 glimpse(germany)
 ```
 
+## Collect match data for a particular country
+
+Use the function `uss_get_matches()` to get data for a country
+
+```{r uss_get_matches}
+germany_matches <- uss_get_matches("germany")
+
+glimpse(germany_matches)
+```
